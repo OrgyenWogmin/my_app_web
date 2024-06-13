@@ -1,25 +1,15 @@
+import React from "react";
+import { ThemeProvider } from "styled-components";
 
+import Routes from "./router";
+import GlobalStyle from "./styles/GlobalStyle";
+import theme from "./styles/theme";
 
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React with nyidol
-          </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <ThemeProvider theme={theme}>
+    <Routes />
+    <GlobalStyle />
+  </ThemeProvider>
+);
 
 export default App;
