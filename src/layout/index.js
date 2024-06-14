@@ -1,32 +1,28 @@
-import React from 'react';
-
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-
-import Footer from '../components/Footer';
-import Header from '../components/Header';
+import React from "react";
+import PropTypes from "prop-types";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 function Layout({ children }) {
   return (
-    <Container>
+    <div
+      style={{
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        alignItems: "center",
+      }}
+    >
       <Header />
       {children}
       <Footer />
-    </Container>
+    </div>
   );
 }
 
 Layout.propTypes = {
   children: PropTypes.element.isRequired,
 };
-
-export const Container = styled.div`
-  height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-`;
 
 export default Layout;
