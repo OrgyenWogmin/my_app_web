@@ -93,6 +93,7 @@ $youtube: #cd201f !default;
 $slack: #3aaf85 !default;
 $dribbble: #ea4c89 !default;
 $github: #222222 !default;
+$whatsapp: #25d366 !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
@@ -124,6 +125,7 @@ $brand-colors: map-merge(
     "slack": $slack,
     "dribbble": $dribbble,
     "github": $github,
+    "whatsapp": $whatsapp,
   ),
   $brand-colors
 );
