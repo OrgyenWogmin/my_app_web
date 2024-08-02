@@ -3,7 +3,7 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import NotFound from "../pages/NotFound";
 import allRoutes from "./routes";
 import Home from "../pages/Home";
-
+import Layout from "../layout";
 const RoutesComp = () => {
   const ResolveRoutes = () => {
     return allRoutes.map((route) => {
@@ -12,7 +12,7 @@ const RoutesComp = () => {
           path={route.path}
           key={`react-route-${route.path}`}
           exact={route.exact === true}
-          Component={route.component}
+          element={<Layout>{route.component}</Layout>}
         />
       );
     });
@@ -21,7 +21,7 @@ const RoutesComp = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" Component={Home} />
+        <Route exact path="/" element={<Layout>{Home}</Layout>} />
         {ResolveRoutes()}
         <Route path="*" Component={NotFound} />
       </Routes>

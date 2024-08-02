@@ -1,24 +1,118 @@
+/*eslint-disable*/
 import React from "react";
-import { Container, Row } from "reactstrap";
+// reactstrap components
+import {
+  Button,
+  NavItem,
+  NavLink,
+  Nav,
+  Row,
+  Col,
+  UncontrolledTooltip,
+} from "reactstrap";
+import {
+  ABOUT_US_ROUTE,
+  BENEFITS_ROUTE,
+  CONTACT_ROUTE,
+  NEWS_AND_EVENTS_ROUTE,
+} from "../../router/routes/routeName";
 
-import { FaFacebook } from "react-icons/fa";
-import { BiLogoGmail } from "react-icons/bi";
-import { IoLogoWhatsapp } from "react-icons/io";
-function Footer() {
-  return (
-    <Container className="mb-4">
-      <Row>
-        <p style={{ display: "flex", justifyContent: "center" }}>
-          © 2024 PrettyCoder
-        </p>
-      </Row>
-      <div style={{ display: "flex", justifyContent: "center", gap: "15px" }}>
-        <FaFacebook size={"20"} color={"#828282"} />
-        <BiLogoGmail size={"20"} color={"#828282"} />
-        <IoLogoWhatsapp size={"20"} color={"#828282"} />
-      </div>
-    </Container>
-  );
+class Footer extends React.Component {
+  render() {
+    return (
+      <>
+        <footer className="footer px-5">
+          <Row className="row-grid align-items-center mb-0">
+            <Col>
+              <p className="text-primary font-weight-light">
+                Thank you for supporting us!{" "}
+                <span className="mb-0 font-weight-light text-gray">
+                  Let's get in touch on any of these platforms.
+                </span>
+              </p>
+            </Col>
+            <Col className="text-lg-right btn-wrapper">
+              <Button
+                className="btn-icon-only rounded-circle mr-4"
+                color="facebook"
+                href="https://www.facebook.com/profile.php?id=100093956561793"
+                id="tooltip837440414"
+                target="_blank"
+              >
+                <span className="btn-inner--icon">
+                  <i className="fa fa-facebook-square" />
+                </span>
+              </Button>
+              <UncontrolledTooltip delay={0} target="tooltip837440414">
+                Like us
+              </UncontrolledTooltip>
+              <Button
+                className="btn-icon-only rounded-circle"
+                color="whatsapp"
+                href="https://wa.me/+917204415208"
+                id="tooltip495507257"
+                target="_blank"
+              >
+                <span className="btn-inner--icon">
+                  <i className="fa fa-whatsapp" />
+                </span>
+              </Button>
+              <UncontrolledTooltip delay={0} target="tooltip495507257">
+                Connect on Whatsapp
+              </UncontrolledTooltip>
+            </Col>
+          </Row>
+          <hr />
+          <Row className="align-items-center">
+            <Col lg="6">
+              <div className="copyright">
+                © {new Date().getFullYear()}{" "}
+                <a
+                  href="https://www.creative-tim.com?ref=adsr-footer"
+                  target="_blank"
+                >
+                  OWJC Office
+                </a>
+                .
+              </div>
+            </Col>
+            <Col lg="6">
+              <Nav className="nav-footer justify-content-end">
+                <NavItem>
+                  <NavLink
+                    href={`${process.env.REACT_APP_BASE_API_URL}${ABOUT_US_ROUTE}`}
+                  >
+                    About Us
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    href={`${process.env.REACT_APP_BASE_API_URL}${CONTACT_ROUTE}`}
+                  >
+                    Contact
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    href={`${process.env.REACT_APP_BASE_API_URL}${NEWS_AND_EVENTS_ROUTE}`}
+                  >
+                    News & Events
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    href={`${process.env.REACT_APP_BASE_API_URL}${BENEFITS_ROUTE}`}
+                  >
+                    Benefits
+                  </NavLink>
+                </NavItem>
+              </Nav>
+            </Col>
+          </Row>
+        </footer>
+      </>
+    );
+  }
 }
 
 export default Footer;
