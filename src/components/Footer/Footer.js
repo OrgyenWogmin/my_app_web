@@ -79,32 +79,18 @@ class Footer extends React.Component {
             <Col lg="6">
               <Nav className="nav-footer justify-content-end">
                 <NavItem>
-                  <NavLink
-                    href={`${process.env.REACT_APP_BASE_API_URL}${ABOUT_US_ROUTE}`}
-                  >
-                    About Us
-                  </NavLink>
+                  <NavLink href={`${ABOUT_US_ROUTE}`}>About Us</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink
-                    href={`${process.env.REACT_APP_BASE_API_URL}${CONTACT_ROUTE}`}
-                  >
-                    Contact
-                  </NavLink>
+                  <NavLink href={`${CONTACT_ROUTE}`}>Contact</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink
-                    href={`${process.env.REACT_APP_BASE_API_URL}${NEWS_AND_EVENTS_ROUTE}`}
-                  >
+                  <NavLink href={`${NEWS_AND_EVENTS_ROUTE}`}>
                     News & Events
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink
-                    href={`${process.env.REACT_APP_BASE_API_URL}${BENEFITS_ROUTE}`}
-                  >
-                    Benefits
-                  </NavLink>
+                  <NavLink href={`${BENEFITS_ROUTE}`}>Benefits</NavLink>
                 </NavItem>
               </Nav>
             </Col>
