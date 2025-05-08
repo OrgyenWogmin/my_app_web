@@ -16,7 +16,7 @@ const Layout = (props) => {
   return (
     <>
       <Header />
-      <div className="main-content px-5" ref={mainContentRef}>
+      <div className="main-content" ref={mainContentRef}>
         {props.children()}
       </div>
       <Footer />

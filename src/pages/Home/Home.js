@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Container, Row, Col, UncontrolledCarousel } from "reactstrap";
+import "./home.css";
 
 const Home = () => {
   const items = [
@@ -18,7 +19,7 @@ const Home = () => {
   ];
   return (
     <div className="py-5">
-      <Row className="justify-content-center align-items-center">
+      {/* <Row className="justify-content-center align-items-center mt-5">
         <Col className="mb-5 mb-lg-0" lg="5">
           <p className="text-black font-weight-bold">
             To build Guru Rinpoche Statue & Preserve Buddha's Dharma
@@ -122,7 +123,50 @@ const Home = () => {
             2023).
           </p>
         </Col>
-      </Row>
+      </Row> */}
+      <div
+        style={{
+          marginTop: 100,
+        }}
+        className="overflow-hidden hero-container"
+      >
+        <img
+          alt="Sample"
+          src={require("../../assets/img/theme/rinpoche monastery.jpeg")}
+          style={{ width: "100%", height: "400px" }}
+          className="hero-image"
+        ></img>
+        <div className="hero-text">
+          <h1
+            className="text-center bold "
+            style={{
+              fontFamily: "Liberation Mono",
+              fontWeight: "bold",
+              color: "#F5F1E3",
+            }}
+          >
+            Welcome To
+          </h1>
+          <h1
+            style={{
+              fontFamily: "Raleway",
+              fontWeight: "bold",
+              color: "#C2A878",
+            }}
+          >
+            ༄༅། ཨྱོན་འོག་མིན་བྱང་ཆུབ་ཆོས་གླིང་།{" "}
+          </h1>{" "}
+          <h1
+            style={{
+              fontFamily: "Raleway",
+              fontWeight: "bold",
+              color: "#C2A878",
+            }}
+          >
+            ORGYEN WOGMIN JANGCHUB CHOELING
+          </h1>{" "}
+        </div>
+      </div>
     </div>
   );
 };
