@@ -23,3 +23,25 @@
   padding: 20px 40px;
   border-radius: 8px;
 }
+
+.object-fit-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.scrolling-comp {
+  overflow-x: scroll; /* Enables horizontal scrolling */
+  overflow-y: hidden; /* Hides vertical scrollbar if present */
+  white-space: nowrap;
+}
+.horizontal-scrollable-row {
+  overflow-x: auto;
+  white-space: nowrap; /* Optional, depending on content wrapping needs */
+}
+
+.horizontal-scrollable-row > .col {
+  display: inline-block; /* Ensures columns stay in a line */
+  float: none; /* Prevents floating behavior that can break inline-block layout */
+}
