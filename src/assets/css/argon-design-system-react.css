@@ -17489,7 +17489,7 @@ textarea[resize="horizontal"] {
   top: 0;
   width: 100%;
   z-index: 100;
-  background-color: transparent !important;
+  background-color: var(--secondary) !important;
   border: 0;
   box-shadow: none;
 }
@@ -20456,7 +20456,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .headroom {
   will-change: transform;
-  background-color: inherit;
+  background-color: var(--secondary);
   transition: all 0.15s ease;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -20476,7 +20476,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .headroom--not-top {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  background-color: #172b4d !important;
+  background-color: var(--secondary) !important;
   box-shadow: 0 1px 10px rgba(130, 130, 134, 0.1);
 }
 

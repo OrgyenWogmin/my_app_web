@@ -16,7 +16,11 @@ const Layout = (props) => {
   return (
     <>
       <Header />
-      <div className="main-content px-5" ref={mainContentRef}>
+      <div
+        className="main-content"
+        style={{ marginTop: 180 }}
+        ref={mainContentRef}
+      >
         {props.children()}
       </div>
       <Footer />
